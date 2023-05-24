@@ -1,0 +1,24 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+boto3 = "*"
+
+[dev-packages]
+simple-networks-with-amazon-vpc-lattice = { path = "cdk", develop = true }
+aws-cdk-lib = "==2.80.0"
+constructs = ">=10.0.0,<11.0.0"
+pytest = "*"
+pytest-mock = "*"
+pycodestyle = "*"
+python-dotenv = "*"
+GitPython = "*"
+yapf = "*"
+flake8 = "*"
+isort = "*"
+"aws-cdk.aws-lambda-python-alpha" = "*"
+
+[requires]
+python_version = "3.10"
