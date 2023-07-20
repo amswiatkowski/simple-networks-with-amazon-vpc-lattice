@@ -3,7 +3,7 @@ from pathlib import Path
 from aws_cdk import Stack, aws_ec2
 from constructs import Construct
 
-from cdk.simple_networks_with_amazon_vpc_lattice.constants import EC2_KEY_NAME
+from cdk.simple_networks_with_amazon_vpc_lattice_cdk.constants import EC2_KEY_NAME
 
 
 class EC2Construct(Construct):
@@ -38,7 +38,7 @@ class EC2Construct(Construct):
         return security_group
 
     def _get_user_data_script(self) -> str:
-        path = Path.cwd() / "cdk/simple_networks_with_amazon_vpc_lattice/ec2/user_data.sh"
+        path = Path.cwd() / "cdk/simple_networks_with_amazon_vpc_lattice_cdk/ec2/user_data.sh"
 
         return path.read_text(encoding="utf-8")
 

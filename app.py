@@ -4,7 +4,7 @@ import os
 from aws_cdk import App, Environment
 from boto3 import client, session
 
-from cdk.simple_networks_with_amazon_vpc_lattice.simple_networks_with_amazon_vpc_lattice_stack import (
+from cdk.simple_networks_with_amazon_vpc_lattice_cdk.simple_networks_with_amazon_vpc_lattice_stack import (
     SimpleNetworksWithAmazonVpcLatticeStack,
     get_stack_name,
 )

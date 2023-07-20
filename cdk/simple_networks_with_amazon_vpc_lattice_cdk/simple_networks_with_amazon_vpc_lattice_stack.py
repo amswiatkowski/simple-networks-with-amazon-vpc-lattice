@@ -6,11 +6,11 @@ from aws_cdk import Stack
 from constructs import Construct, DependencyGroup
 from git import Repo
 
-from cdk.simple_networks_with_amazon_vpc_lattice.constants import SERVICE_NAME
-from cdk.simple_networks_with_amazon_vpc_lattice.ec2.ec2_construct import EC2Construct
-from cdk.simple_networks_with_amazon_vpc_lattice.ecs.ecs_construct import EcsConstruct
-from cdk.simple_networks_with_amazon_vpc_lattice.lambda_function.lambda_construct import LambdaConstruct
-from cdk.simple_networks_with_amazon_vpc_lattice.lattice.lattice_construct import LatticeConstruct
+from cdk.simple_networks_with_amazon_vpc_lattice_cdk.constants import SERVICE_NAME
+from cdk.simple_networks_with_amazon_vpc_lattice_cdk.ec2.ec2_construct import EC2Construct
+from cdk.simple_networks_with_amazon_vpc_lattice_cdk.ecs.ecs_construct import EcsConstruct
+from cdk.simple_networks_with_amazon_vpc_lattice_cdk.lambda_function.lambda_construct import LambdaConstruct
+from cdk.simple_networks_with_amazon_vpc_lattice_cdk.lattice.lattice_construct import LatticeConstruct
 
 
 def get_username() -> str:

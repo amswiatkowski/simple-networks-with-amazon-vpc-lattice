@@ -16,7 +16,7 @@ Amazon VPC Lattice is an application networking service that consistently connec
  * node.js
  * AWS region in which Lattice is available (i.e. eu-west-1)
  * Python 3.10
- * pipenv
+ * Poetry
 
 ## Quick start
 1. Clone the repo
@@ -25,9 +25,7 @@ Amazon VPC Lattice is an application networking service that consistently connec
    ```
 2. Install dependencies
     ```sh
-    pipenv shell
-    pipenv install --dev
-    cdk bootstrap
+    poetry install
     ```
 3. Create Key Pair for EC2 instance in [AWS Console](https://eu-west-1.console.aws.amazon.com/ec2/home?region=eu-west-1#KeyPairs:), and place key's name inside constant called `EC2_KEY_NAME` [constants.py](./cdk/simple_networks_with_amazon_vpc_lattice/constants.py) 
 4. Deploy the project

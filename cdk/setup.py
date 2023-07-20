@@ -6,7 +6,7 @@ from setuptools import find_packages, setup
 here = path.abspath(path.dirname(__file__))
 
 setup(
-    name='simple-networks-with-amazon-vpc-lattice',
+    name='simple-networks-with-amazon-vpc-lattice-cdk',
     version='3.1',
     description='CDK code showing possibilities of Amazon VPC Lattice service',
     classifiers=[
