@@ -36,7 +36,7 @@ Amazon VPC Lattice is an application networking service that consistently connec
 ## Useful commands
  * `./lint.sh`          Fixes indents and checks your code quality
  * `./destroy.sh`       Triggers cdk destroy
- * `./deploy/sh`        Deploys stack to the AWS accoun## Author
+ * `./deploy/sh`        Deploys stack to the AWS account
 
 ## Useful links
 * [AWS CDK](https://docs.aws.amazon.com/cdk/v2/guide/cli.html)
