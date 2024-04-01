@@ -21,7 +21,7 @@ Amazon VPC Lattice is an application networking service that consistently connec
 ## Quick start
 1. Clone the repo
    ```sh
-   git clone https://github.com/sz3jdii/simple-networks-with-amazon-vpc-lattice.git
+   git clone https://github.com/amswiatkowski/simple-networks-with-amazon-vpc-lattice.git
    ```
 2. Install dependencies
     ```sh
@@ -46,9 +46,9 @@ Amazon VPC Lattice is an application networking service that consistently connec
 
 ## Author
 **Adam Świątkowski**
-* [github/sz3jdii](https://github.com/sz3jdii)
+* [github/amswiatkowski](https://github.com/amswiatkowski)
 * [Blog](https://cloudybarz.com/)
 
 ### License
-Copyright © 2023, [Adam Świątkowski](https://github.com/sz3jdii).
+Copyright © 2023, [Adam Świątkowski](https://github.com/amswiatkowski).
 Released under the [MIT License](LICENSE).
