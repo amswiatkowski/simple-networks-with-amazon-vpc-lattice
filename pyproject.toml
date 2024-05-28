@@ -2,7 +2,7 @@
 name = "simple-networks-with-amazon-vpc-lattice"
 version = "0.1.0"
 description = "CDK code showing possibilities of Amazon VPC Lattice service"
-authors = ["sz3jdii <adam.swiatkowski@iodi.pl>"]
+authors = ["amswiatkowski <adam.swiatkowski@iodi.pl>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
