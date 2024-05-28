@@ -14,7 +14,7 @@ setup(
         'Topic :: Software Development :: Build Tools',
         'Programming Language :: Python :: 3.10',
     ],
-    url='https://github.com/sz3jdii/simple-networks-with-amazon-vpc-lattice',
+    url='https://github.com/amswiatkowski/simple-networks-with-amazon-vpc-lattice',
     author='Adam Świątkowski',
     author_email='adam.swiatkowski@iodi.pl',
     packages=find_packages(exclude=['tests']),
