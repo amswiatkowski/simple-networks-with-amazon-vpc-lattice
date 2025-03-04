@@ -2,10 +2,10 @@ from pathlib import Path
 
 from aws_cdk import Stack, aws_ec2
 from constructs import Construct
+from simple_networks_with_amazon_vpc_lattice_cdk.constants import EC2_KEY_NAME
 
-from cdk.simple_networks_with_amazon_vpc_lattice_cdk.constants import EC2_KEY_NAME
 
-
+# pylint: disable=too-many-instance-attributes
 class EC2Construct(Construct):
 
     def __init__(self, scope: Construct, id_: str) -> None:

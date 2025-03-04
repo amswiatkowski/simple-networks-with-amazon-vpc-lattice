@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "simple-networks-with-amazon-vpc-lattice-cdk"
+version = "0.1.0"
+description = "CDK code showing possibilities of Amazon VPC Lattice service"
+authors = ["amswiatkowski <adam.swiatkowski@iodi.pl>"]
+packages = [{ include = "simple_networks_with_amazon_vpc_lattice_cdk" }]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+
+# 3rdparties
+aws-cdk-lib = ">=2.0.0"
+constructs = ">=10.0.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

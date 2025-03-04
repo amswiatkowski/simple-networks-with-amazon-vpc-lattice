@@ -2,6 +2,7 @@ from aws_cdk import Stack, aws_ec2, aws_ecs, aws_elasticloadbalancingv2, aws_iam
 from constructs import Construct
 
 
+# pylint: disable=too-many-instance-attributes
 class EcsConstruct(Construct):
 
     def __init__(self, scope: Construct, id_: str) -> None:

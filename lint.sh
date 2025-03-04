@@ -1,5 +1,10 @@
 #!/bin/bash
-echo "Using flake8 to lint the code"
-flake8 cdk/* tests/* lambda_handlers/* --exclude patterns='build,cdk.json,cdk.context.json,.yaml'
+echo "Running yapf to format the code"
+yapf -i -p -vv --exclude=.venv --exclude=.build --exclude=cdk.out --exclude=.git -r .
 echo "Using isort to order python imports"
-isort ${PWD}
+isort --skip-glob=".venv" \
+      --extend-skip-glob="cdk.out" \
+      --extend-skip-glob=".build" \
+      .
+echo "Using pylint to lint the code"
+pylint --rcfile .pylintrc --jobs 4 --py-version 3.12 --ignore=".venv,cdk.out,.build" .

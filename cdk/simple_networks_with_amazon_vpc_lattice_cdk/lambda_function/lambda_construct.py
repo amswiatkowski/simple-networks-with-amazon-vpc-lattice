@@ -4,6 +4,7 @@ from aws_cdk.aws_lambda_python_alpha import PythonLayerVersion
 from constructs import Construct
 
 
+# pylint: disable=too-many-instance-attributes
 class LambdaConstruct(Construct):
 
     def __init__(self, scope: Construct, id_: str) -> None:
@@ -64,7 +65,8 @@ class LambdaConstruct(Construct):
             self,
             'LambdaCommonLayer',
             entry='.build/common_layer',
-            compatible_runtimes=[aws_lambda.Runtime.PYTHON_3_10],
+            compatible_runtimes=[aws_lambda.Runtime.PYTHON_3_12],
+            compatible_architectures=[aws_lambda.Architecture.ARM_64],
             removal_policy=RemovalPolicy.DESTROY,
         )
 
@@ -72,7 +74,8 @@ class LambdaConstruct(Construct):
         return aws_lambda.Function(
             self,
             'LambdaFunction',
-            runtime=aws_lambda.Runtime.PYTHON_3_10,
+            runtime=aws_lambda.Runtime.PYTHON_3_12,
+            architecture=aws_lambda.Architecture.ARM_64,
             code=aws_lambda.Code.from_asset('.build/lambdas/'),
             handler='lambda_handlers.lambda_function.handle',
             retry_attempts=0,

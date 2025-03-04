@@ -1,3 +1,3 @@
 {
-  "app": "python app.py"
+  "app": "python cdk/simple_networks_with_amazon_vpc_lattice_cdk/app.py"
 }

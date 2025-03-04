@@ -1,3 +1,5 @@
+# pylint: disable=broad-exception-caught
+
 import os
 from pathlib import Path
 from typing import Final
@@ -5,12 +7,11 @@ from typing import Final
 from aws_cdk import Stack
 from constructs import Construct, DependencyGroup
 from git import Repo
-
-from cdk.simple_networks_with_amazon_vpc_lattice_cdk.constants import SERVICE_NAME
-from cdk.simple_networks_with_amazon_vpc_lattice_cdk.ec2.ec2_construct import EC2Construct
-from cdk.simple_networks_with_amazon_vpc_lattice_cdk.ecs.ecs_construct import EcsConstruct
-from cdk.simple_networks_with_amazon_vpc_lattice_cdk.lambda_function.lambda_construct import LambdaConstruct
-from cdk.simple_networks_with_amazon_vpc_lattice_cdk.lattice.lattice_construct import LatticeConstruct
+from simple_networks_with_amazon_vpc_lattice_cdk.constants import SERVICE_NAME
+from simple_networks_with_amazon_vpc_lattice_cdk.ec2.ec2_construct import EC2Construct
+from simple_networks_with_amazon_vpc_lattice_cdk.ecs.ecs_construct import EcsConstruct
+from simple_networks_with_amazon_vpc_lattice_cdk.lambda_function.lambda_construct import LambdaConstruct
+from simple_networks_with_amazon_vpc_lattice_cdk.lattice.lattice_construct import LatticeConstruct
 
 
 def get_username() -> str:

@@ -2,6 +2,7 @@ from aws_cdk import Stack, aws_vpclattice
 from constructs import Construct
 
 
+# pylint: disable=too-many-instance-attributes
 class LatticeConstruct(Construct):
 
     def __init__(self, scope: Construct, id_: str) -> None:
@@ -35,7 +36,7 @@ class LatticeConstruct(Construct):
         self.listener_for_ecs = self._build_listener_for_ecs()
         self.listener_for_lambda = self._build_listener_for_lambda()
 
-        self.auth_policy_for_lambda = self._add_auth_policy_for_lambda()
+        self._add_auth_policy_for_lambda()
 
     def _build_service_network(self) -> aws_vpclattice.CfnServiceNetwork:
         return aws_vpclattice.CfnServiceNetwork(
@@ -144,7 +145,7 @@ class LatticeConstruct(Construct):
             service_identifier=self.service_for_lambda_function.attr_arn,
         )
 
-    def _add_auth_policy_for_lambda(self):
+    def _add_auth_policy_for_lambda(self) -> None:
         # Allow calls to this Lambda only from the EC2
         aws_vpclattice.CfnAuthPolicy(
             self, "lambdaserviceauthpolicy", policy={
